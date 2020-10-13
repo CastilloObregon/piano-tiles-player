@@ -24,6 +24,8 @@ void loop() { // put your main code here, to run repeatedly:
     // map the light readings to the angle possible by the servo motor 
     lightValue = map (lightValue, 0, 1023, 0, 180);
 
+    Serial.println("Intensity="); //print on serial monitor using ""
+    Serial.println(lightValue);  
 
     // control the servo motor based on the light value read, adjust linearly by angles 
     servo1.write (lightValue); 
