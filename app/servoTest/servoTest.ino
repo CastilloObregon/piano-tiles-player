@@ -19,8 +19,7 @@ void setup(){
 void taskServo(void * parameter ){
 	servo.write(0);   
    delay(10);         
-   servo.write(45);   
-   delay(10);         
+   servo.write(45);            
 }
 
 void loop(){
