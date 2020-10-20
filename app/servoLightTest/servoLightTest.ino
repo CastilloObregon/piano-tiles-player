@@ -21,7 +21,7 @@ void loop() {
     Serial.println(lightValue);  
 
     // map the light readings to the angle possible by the servo motor 
-    lightValue = map (lightValue, 0, 1023, 0, 180);
+    lightValue = map (lightValue, 0, 1023, 0, 45);
 
     Serial.println("Intensity="); //print on serial monitor using ""
     Serial.println(lightValue);  
