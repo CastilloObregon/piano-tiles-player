@@ -7,12 +7,11 @@ Servo servo1;
 
 void setup() { // put your setup code here, to run once:
 
-pinMode(8,INPUT);
-// set the servo pin, pin 9, as an servo output pin 
-servo1.attach(9);
+  // set the servo pin, pin 9, as an servo output pin 
+  servo1.attach(9);
 
 }
-void loop() { // put your main code here, to run repeatedly:
+void loop() { 
     int temp=digitalRead(8);
     // Serial.println("Intensity="); //print on serial monitor using ""
     // Serial.println(temp);         //display output on serial monitor
