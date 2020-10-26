@@ -7,6 +7,7 @@ typedef struct Data
     int lightPin;
     Servo servo;
 } monitor_params;
+
 // Llamada a servos
 Servo servo1;  
 Servo servo2;  
@@ -25,21 +26,32 @@ void setup(){
 
   // Task 1
   monitor_params data1 = {servoPins[0],lightPins[0],servo1};
-  xTaskCreate(
-    taskServo,              /* Task function. */
-    "taskServo1",            /* String with name of task. */
-    2048,                     /* Stack size in words. */
-    (void *) &data1,       /* Parameter passed as input of the task */
-    1,                         /* Priority of the task. */
+  /*xTaskCreate(
+    taskServo,         
+    "taskServo1",      
+    2048,              
+    (void *) &data1,   
+    1,     
+    NULL);*/
+    xTaskCreate(
+    taskServo,         
+    "taskServo1",      
+    2048,              
+    (void *) &data1,   
+    1,     
     NULL);
 }
  
 void taskServo(void * datos ){
+  Serial.println("Estas en taskServo");
   monitor_params parameter = *(monitor_params *)datos;
-  Servo servo = parameter.servo;
-  int servoPin = parameter.servoPin;
+  //Servo servo = parameter.servo;
+  Servo servo;
+  //int servoPin = parameter.servoPin;
+  int servoPin = 7;
   servo.attach(servoPin);
-  int lightValue = parameter.lightPin;
+  //int lightValue = parameter.lightPin;
+  int lightValue = analogRead(A0);
   // Serial.println("Intensity="); //print on serial monitor using ""
   // Serial.println(temp);         //display output on serial monitor
   // delay(300);
