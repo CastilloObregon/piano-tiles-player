@@ -18,7 +18,7 @@ void setup(){
   // Pines para servos
   int servoPins[4]= {7,9,11,13};
   // Pines para sensores
-  int lightPins[4] = {A0,A1,A3,A4};
+  int lightPins[4] = {analogRead(A0),analogRead(A1),analogRead(A3),analogRead(A4)};
    
 
   Serial.begin(9600);  
@@ -39,7 +39,7 @@ void taskServo(void * datos ){
   Servo servo = parameter.servo;
   int servoPin = parameter.servoPin;
   servo.attach(servoPin);
-  int lightValue = analogRead(parameter.lightPin);
+  int lightValue = parameter.lightPin;
   // Serial.println("Intensity="); //print on serial monitor using ""
   // Serial.println(temp);         //display output on serial monitor
   // delay(300);
