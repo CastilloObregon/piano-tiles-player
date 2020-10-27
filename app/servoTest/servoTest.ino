@@ -37,14 +37,14 @@ void setup(){
     taskServo,         
     "taskServo1",      
     2048,              
-    (void *) &data1,   
+    NULL,   
     1,     
     NULL);
 }
  
 void taskServo(void * datos ){
   Serial.println("Estas en taskServo");
-  monitor_params parameter = *(monitor_params *)datos;
+  //monitor_params parameter = *(monitor_params *)datos;
   //Servo servo = parameter.servo;
   Servo servo;
   //int servoPin = parameter.servoPin;
