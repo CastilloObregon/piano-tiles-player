@@ -22,10 +22,10 @@ void setup() { // put your setup code here, to run once:
 
 }
 void loop() { 
-    int lightValue7 = analogRead(A0);
-    int lightValue9 = analogRead(A1);
-    int lightValue11 = analogRead(A2);
-    int lightValue13 = analogRead(A3);
+    int lightValue7 = analogRead(A7);
+    int lightValue9 = analogRead(A9);
+    int lightValue11 = analogRead(A11);
+    int lightValue13 = analogRead(A13);
     //Serial.println("Intensity="); //print on serial monitor using ""
     //Serial.println(lightValue);  
     
