@@ -1,4 +1,4 @@
-#include <Servo.h>
+  #include <Servo.h>
 #include <Arduino_FreeRTOS.h>
     
 typedef struct Data
@@ -17,15 +17,15 @@ Servo servo4;
 void setup(){
   
   // Pines para servos
-  int servoPins[4]= {7,9,11,13};
+  //int servoPins[4]= {7,9,11,13};
   // Pines para sensores
-  int lightPins[4] = {analogRead(A0),analogRead(A1),analogRead(A3),analogRead(A4)};
+  //int lightPins[4] = {analogRead(A0),analogRead(A1),analogRead(A3),analogRead(A4)};
    
 
   Serial.begin(9600);  
 
   // Task 1
-  monitor_params data1 = {servoPins[0],lightPins[0],servo1};
+  //monitor_params data1 = {servoPins[0],lightPins[0],servo1};
   /*xTaskCreate(
     taskServo,         
     "taskServo1",      
