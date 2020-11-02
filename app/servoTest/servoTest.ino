@@ -36,7 +36,7 @@ void setup(){
     xTaskCreate(
     taskServo,         
     "taskServo1",      
-    2048,              
+    10000,              
     NULL,   
     1,     
     NULL);
