@@ -22,10 +22,10 @@ void setup() { // put your setup code here, to run once:
 
 }
 void loop() { 
-    int lightValue7 = analogRead(A7);
-    int lightValue9 = analogRead(A9);
-    int lightValue11 = analogRead(A11);
-    int lightValue13 = analogRead(A13);
+    int lightValue7 = analogRead(A0);
+    int lightValue9 = analogRead(A1);
+    int lightValue11 = analogRead(A2);
+    int lightValue13 = analogRead(A3);
     Serial.println("Intensity="); //print on serial monitor using ""
     Serial.println(lightValue7);  
     
@@ -35,10 +35,10 @@ void loop() {
     //Serial.println(lightValue2);  
     
     // map the light readings to the angle possible by the servo motor 
-    lightValue7 = map (lightValue7, 0, 1023, 0, 40);
-    lightValue9 = map (lightValue9, 0, 1023, 0, 40);
-    lightValue11 = map (lightValue11, 0, 1023, 0, 40);
-    lightValue13 = map (lightValue13, 0, 1023, 0, 40);
+    lightValue7 = map (lightValue7, 0, 1023, 0, 90);
+    lightValue9 = map (lightValue9, 0, 1023, 0, 90);
+    lightValue11 = map (lightValue11, 0, 1023, 0, 90);
+    lightValue13 = map (lightValue13, 0, 1023, 0, 90);
 
 //    Serial.println("Intensity2="); //print on serial monitor using ""
 //    Serial.println(lightValue7);  
